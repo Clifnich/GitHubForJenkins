@@ -1,0 +1,20 @@
+<project>
+
+	 <target name="clean">
+		  <delete dir="bin"/>
+	 </target>
+
+	 <target name="build" depends="clean">
+		  <mkdir dir="bin"/>
+		  <javac srcdir="src" destdir="bin" includeantruntime="false"/>
+	 </target>
+
+	 <target name="run" depends="build">
+		  <java classname="oata.HelloWorld">
+				<classpath>
+					 <pathelement location="bin"/>
+				</classpath>
+		  </java>
+	 </target>
+
+</project>
